@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="747.0" style="-fx-background-color: #F4F7FB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sample.kursh.HelloController">
+   <children>
+      <AnchorPane prefHeight="460.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow color="#00000040" />
+         </effect>
+         <children>
+            <Accordion layoutX="-1.0">
+
+              <panes>
+
+                <TitledPane animated="false" text="Без ключа">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="170.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="Base64" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBase64ButtonClick" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Base64" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="MD5" layoutX="12.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleMD5ButtonClick" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="MD5" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="RIPEMD160" layoutX="12.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleRIPEMD160ButtonClick" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="RIPEMD-160" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="SHA1" layoutX="12.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleSHA1ButtonClick" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="SHA-1" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                  <TitledPane animated="false" prefWidth="214.0" text="Симметричные ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="211.0">
+                           <children>
+                              <Button fx:id="AES" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAESButtonClick" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="AES (Rijndael)">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="DES" layoutX="12.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleDESButtonClick" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="DES">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="RC4" layoutX="12.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleRC4ButtonClick" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="RC4">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField fx:id="KeySimmet" layoutX="33.0" layoutY="145.0" prefHeight="30.0" prefWidth="149.0" promptText="Введите ключ" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" prefWidth="214.0" text="Ассиметричный">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="RSA" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRSABButtonClick" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: #fafafa; -fx-border-color: #ccc; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="RSA" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextArea fx:id="KEYOUTANDINPUTCRYPT" layoutX="33.0" layoutY="60.0" prefHeight="25.0" prefWidth="149.0" promptText="Ваш ключ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+      </AnchorPane>
+      <Text fill="#434343" layoutX="380.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Преобразовать">
+         <font>
+            <Font name="Montserrat Bold" size="29.0" />
+         </font>
+      </Text>
+      <Button fx:id="Codirovat" layoutX="292.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleCodirovatButtonClick" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #5097A4; -fx-border-color: #5097A4; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Кодировать" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="TextEnter" alignment="TOP_LEFT" layoutX="235.0" layoutY="69.0" prefHeight="110.0" prefWidth="494.0" promptText="Введите текст">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="DecodeBtn" layoutX="497.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleDecodeButtonClick" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #5097A4; -fx-border-color: #5097A4; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Декодировать" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextArea fx:id="TextOut" layoutX="235.0" layoutY="253.0" prefHeight="110.0" prefWidth="493.0" promptText="Результат">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="CopyBtn" layoutX="394.0" layoutY="380.0" mnemonicParsing="false" onAction="#handleCopyButtonClick" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #4682B4; -fx-border-color: #4682B4; -fx-border-radius: 5px;" stylesheets="@styles/main.css" text="Копировать" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="Close" layoutX="713.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleCloseButtonClick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #fbd0d0; -fx-border-color: #fbd0d0; -fx-border-radius: 5px;" stylesheets="@styles/main.css" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <Label text="✕" style="-fx-font-size: 20px; -fx-text-fill: #FFF;" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
